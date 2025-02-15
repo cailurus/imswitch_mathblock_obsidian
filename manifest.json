@@ -1,0 +1,12 @@
+  {
+    "id": "imswitch_mathblock",
+    "name": "Input Method Auto Switch in Math Block",
+    "version": "1.0.0",
+    "minAppVersion": "0.15.0",
+    "description": "Automatically switch input methods based on context.",
+    "author": "XXM",
+    "authorUrl": "https://xxm.plus",
+    "isDesktopOnly": true,
+    "main": "main.js",
+    "settings": true
+  }
