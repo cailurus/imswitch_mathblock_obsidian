@@ -22,16 +22,15 @@ This Obsidian plugin automatically switches input methods when writing mathemati
 The plugin provides two configurable commands:
 
 1. Command to switch to English input method
-   - Default value: `im-select com.apple.keylayout.ABC`
-   
+   - Default value: `macism com.apple.keylayout.ABC`
 2. Command to switch back to previous input method
-   - Default value: `im-select com.tencent.inputmethod.wetype.pinyin`
+   - Default value: `macism com.tencent.inputmethod.wetype.pinyin`
 
 You can modify these commands in the plugin settings according to your system and input method preferences.
 
 ## System Requirements
 
-- macOS: Requires [im-select](https://github.com/daipeihust/im-select) to be installed
+- macOS: Requires [macism](https://github.com/laishulu/macism) to be installed
 - Other systems: Requires appropriate command-line tools for switching input methods
 
 ## Important Notes
@@ -44,7 +43,8 @@ You can modify these commands in the plugin settings according to your system an
 
 Q: Why isn't the plugin switching input methods correctly?  
 A: Please ensure:
-1. im-select or other input method switching tool is properly installed
+
+1. macism other input method switching tool is properly installed
 2. Correct commands are configured in plugin settings
 3. The command-line tool works properly in terminal
 
