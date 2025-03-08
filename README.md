@@ -1,4 +1,4 @@
-# Obsidian Auto Switch Input Plugin
+# Auto IME Switch for Math Block in Obsidian
 
 This Obsidian plugin automatically switches input methods when writing mathematical formulas to improve writing efficiency. When the cursor enters a math formula area (between $ symbols), it automatically switches to English input; when the cursor leaves the formula area, it switches back to the previous input method.
 
