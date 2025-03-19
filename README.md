@@ -19,12 +19,14 @@ This Obsidian plugin automatically switches input methods when writing mathemati
 
 ## Configuration
 
-The plugin provides two configurable commands:
+The plugin provides three configurable commands:
 
-1. Command to switch to English input method
-   - Default value: `macism com.apple.keylayout.ABC`
-2. Command to switch back to previous input method
-   - Default value: `macism com.tencent.inputmethod.wetype.pinyin`
+1. English input method
+   - Default value: `com.apple.keylayout.ABC`
+2. Previous input method (usually an IME for non English writer, like CJK)
+   - Default value: `com.tencent.inputmethod.wetype.pinyin`
+3. Path to the IME switch command:
+   - Default value: `/opt/homebrew/bin/macism`
 
 You can modify these commands in the plugin settings according to your system and input method preferences.
 
