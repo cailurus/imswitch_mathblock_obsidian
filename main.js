@@ -9,6 +9,7 @@ module.exports = class AutoSwitchInputPlugin extends Plugin {
             switchToEnglish: 'com.apple.keylayout.ABC',
             switchToPrevious: 'com.tencent.inputmethod.wetype.pinyin',
             imeSelectorPath: '/opt/homebrew/bin/macism',
+            changed: false
         };
 
         this.settings = Object.assign({}, DEFAULT_SETTINGS);
@@ -49,6 +50,12 @@ function createExtension(settings) {
             }
         }
         switchIME() {
+            if (settings.changed)
+            {
+                settings.changed = false;
+                this.previousInputMethodCode = `${settings.imeSelectorPath} ${settings.switchToPrevious}`;
+                this.englishInputMethodCode = `${settings.imeSelectorPath} ${settings.switchToEnglish}`;
+            }
             if (this.isInsideMathBlock) {
                 this.switchToEnglishInput();
             } else {
@@ -122,6 +129,7 @@ class AutoSwitchInputSettingTab extends PluginSettingTab {
             .addText(text => text
                 .setValue(this.plugin.settings.switchToPrevious)
                 .onChange(async (value) => {
+                    this.plugin.settings.changed = true;
                     this.plugin.settings.switchToPrevious = value;
                     await this.plugin.saveSettings();
                 }));
@@ -132,6 +140,7 @@ class AutoSwitchInputSettingTab extends PluginSettingTab {
             .addText(text => text
                 .setValue(this.plugin.settings.imeSelectorPath)
                 .onChange(async (value) => {
+                    this.plugin.settings.changed = true;
                     this.plugin.settings.imeSelectorPath = value;
                     await this.plugin.saveSettings();
                 }));
