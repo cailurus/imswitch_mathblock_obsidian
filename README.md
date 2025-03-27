@@ -52,6 +52,14 @@ A: Please ensure:
 2. Correct commands are configured in plugin settings
 3. The command-line tool works properly in terminal
 
+
+Q: How to know the IME name?
+A: 
+
+1. Install macism first
+2. Use `macism` in any terminal app
+
+
 ## Contributing
 
 Issues and Pull Requests are welcome to help improve this plugin.
